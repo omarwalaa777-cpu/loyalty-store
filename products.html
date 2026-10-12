@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لويالتي - المنتجات</title>
+  <meta name="description" content="لويالتي - تسوق منتجاتنا">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">لويالتي</a>
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html" aria-current="page">المنتجات</a>
+        <a href="contact.html">تواصل معنا</a>
+        <a href="cart.html" aria-label="سلة التسوق">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">اكتشف مجموعتنا</h1>
+        <p class="section-subtitle">تصفح مجموعتنا المختارة بعناية من الملابس الرجالية العصرية</p>
+
+        <div class="catalog-controls">
+          <div class="filter-group" role="group" aria-label="تصفية حسب الفئة">
+            <button class="filter-btn active" data-category="all">الكل</button>
+            <button class="filter-btn" data-category="تيشيرتات عادية">تيشيرتات عادية</button>
+            <button class="filter-btn" data-category="تيشيرتات أوفر سايز">تيشيرتات أوفر سايز</button>
+            <button class="filter-btn" data-category="سويت شيرت">سويت شيرت</button>
+            <button class="filter-btn" data-category="جينز">جينز</button>
+          </div>
+          <div class="sort-group">
+            <label for="sort-select" class="sort-label">ترتيب حسب السعر:</label>
+            <select id="sort-select" class="form-input sort-select">
+              <option value="default">الافتراضي</option>
+              <option value="price-asc">من الأقل إلى الأعلى</option>
+              <option value="price-desc">من الأعلى إلى الأقل</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="product-grid" class="product-grid"></div>
+        <p id="no-results" class="no-results" hidden>لا توجد منتجات في هذه الفئة حاليًا.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-text">لويالتي &copy; 2026</span>
+      <nav class="footer-links" aria-label="روابط التذييل">
+        <a href="products.html">المنتجات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

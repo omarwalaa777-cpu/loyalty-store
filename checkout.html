@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لويالتي - إتمام الطلب</title>
+  <meta name="description" content="لويالتي - إتمام الطلب">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">لويالتي</a>
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="contact.html">تواصل معنا</a>
+        <a href="cart.html" aria-label="سلة التسوق">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">إتمام الطلب</h1>
+
+        <div id="checkout-empty" class="cart-empty" hidden>
+          <p class="cart-empty-text">سلتك فارغة. لا يمكن إتمام الطلب بدون منتجات.</p>
+          <a href="products.html" class="btn btn-primary">استكشف المنتجات</a>
+        </div>
+
+        <div id="checkout-content" class="checkout-content">
+          <form id="checkout-form" class="checkout-form" novalidate>
+            <div class="form-group">
+              <label for="full-name" class="form-label">الاسم الكامل <span class="required">*</span></label>
+              <input type="text" id="full-name" name="fullName" class="form-input" required autocomplete="name">
+              <p class="field-error" id="error-fullName" hidden></p>
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">رقم الهاتف <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" required autocomplete="tel" placeholder="01xxxxxxxxx" dir="ltr">
+              <p class="field-error" id="error-phone" hidden></p>
+            </div>
+
+            <div class="form-group">
+              <label for="governorate" class="form-label">المحافظة <span class="required">*</span></label>
+              <input type="text" id="governorate" name="governorate" class="form-input" required>
+              <p class="field-error" id="error-governorate" hidden></p>
+            </div>
+
+            <div class="form-group">
+              <label for="city" class="form-label">المدينة أو المنطقة <span class="required">*</span></label>
+              <input type="text" id="city" name="city" class="form-input" required>
+              <p class="field-error" id="error-city" hidden></p>
+            </div>
+
+            <div class="form-group">
+              <label for="address" class="form-label">العنوان بالتفصيل <span class="required">*</span></label>
+              <textarea id="address" name="address" class="form-input" rows="3" required></textarea>
+              <p class="field-error" id="error-address" hidden></p>
+            </div>
+
+            <div class="form-group">
+              <label for="notes" class="form-label">ملاحظات إضافية (اختياري)</label>
+              <textarea id="notes" name="notes" class="form-input" rows="2"></textarea>
+            </div>
+
+            <div class="payment-method">
+              <span class="form-label">طريقة الدفع</span>
+              <div class="payment-option">
+                <input type="radio" id="cod" name="payment" value="cod" checked disabled>
+                <label for="cod">الدفع عند الاستلام</label>
+              </div>
+            </div>
+
+            <p class="field-error" id="form-error" hidden></p>
+            <button type="submit" class="btn btn-primary checkout-submit" id="submit-btn">تأكيد الطلب</button>
+          </form>
+
+          <aside class="cart-summary checkout-summary">
+            <h2 class="cart-summary-title">ملخص الطلب</h2>
+            <div id="checkout-items" class="checkout-items"></div>
+            <div class="cart-summary-row">
+              <span>المجموع الفرعي:</span>
+              <span id="checkout-subtotal" class="cart-subtotal">0 ج.م</span>
+            </div>
+            <p class="cart-note">سيتم حساب الشحن عند التوصيل.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-text">لويالتي &copy; 2026</span>
+      <nav class="footer-links" aria-label="روابط التذييل">
+        <a href="products.html">المنتجات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

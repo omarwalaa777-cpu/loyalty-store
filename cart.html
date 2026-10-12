@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لويالتي - سلة التسوق</title>
+  <meta name="description" content="لويالتي - سلة التسوق">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">لويالتي</a>
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="index.html">الرئيسية</a>
+        <a href="products.html">المنتجات</a>
+        <a href="contact.html">تواصل معنا</a>
+        <a href="cart.html" aria-label="سلة التسوق" aria-current="page">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span id="cart-count" class="cart-count" aria-label="عدد العناصر في السلة"></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">سلة التسوق</h1>
+
+        <div id="cart-empty" class="cart-empty" hidden>
+          <p class="cart-empty-text">سلتك فارغة حاليًا.</p>
+          <a href="products.html" class="btn btn-primary">استكشف المنتجات</a>
+        </div>
+
+        <div id="cart-content" class="cart-content">
+          <div id="cart-items" class="cart-items"></div>
+
+          <aside class="cart-summary">
+            <h2 class="cart-summary-title">ملخص الطلب</h2>
+            <div class="cart-summary-row">
+              <span>المجموع الفرعي:</span>
+              <span id="cart-subtotal" class="cart-subtotal">0 ج.م</span>
+            </div>
+            <p class="cart-note">سيتم حساب الشحن عند إتمام الطلب.</p>
+            <a href="products.html" class="btn btn-outline cart-continue">متابعة التسوق</a>
+            <a href="checkout.html" class="btn btn-primary cart-checkout">إتمام الطلب</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="footer-text">لويالتي &copy; 2026</span>
+      <nav class="footer-links" aria-label="روابط التذييل">
+        <a href="products.html">المنتجات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
